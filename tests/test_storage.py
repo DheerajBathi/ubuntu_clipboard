@@ -66,5 +66,22 @@ class TestStorage(unittest.TestCase):
         self.assertEqual(len(results), 1)
         self.assertEqual(results[0]["content_hash"], "h_fruit")
 
+    def test_counts_and_link_filter(self):
+        self.storage.add_or_touch_text("https://example.com", "https://example.com", 19, 1, "h_url1")
+        self.storage.add_or_touch_text("http://test.org/path", "http://test.org/path", 20, 1, "h_url2")
+        id_text = self.storage.add_or_touch_text("Regular text note", "Regular text note", 17, 1, "h_text")
+        self.storage.toggle_pin(id_text)
+
+        counts = self.storage.get_counts()
+        self.assertEqual(counts["all"], 3)
+        self.assertEqual(counts["link"], 2)
+        self.assertEqual(counts["text"], 3)
+        self.assertEqual(counts["pinned"], 1)
+
+        links = self.storage.get_items(filter_type="link")
+        self.assertEqual(len(links), 2)
+        for link in links:
+            self.assertTrue(link["content"].startswith(("http://", "https://")))
+
 if __name__ == "__main__":
     unittest.main()

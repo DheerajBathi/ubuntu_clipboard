@@ -1,17 +1,26 @@
-/* Windows 11 Fluent Clipboard Theme for Ubuntu GTK4 / Libadwaita */
+/* Windows 11 Fluent Acrylic Dark Theme for WinClip GTK3 */
 
+/* Top-level Translucent Window */
 window.winclip-window {
-    background-color: alpha(#1e1e1e, 0.96);
-    color: #f3f3f3;
-    border-radius: 16px;
-    border: 1px solid alpha(#ffffff, 0.12);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    background-color: alpha(#18181b, 0.96);
+    color: #f4f4f5;
+    border-radius: 18px;
+    border: 1px solid alpha(#ffffff, 0.14);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
 }
 
-/* Header */
+/* Header Area */
 .winclip-header {
-    padding: 14px 16px 10px 16px;
-    border-bottom: 1px solid alpha(#ffffff, 0.08);
+    padding: 14px 18px 12px 18px;
+    border-bottom: 1px solid alpha(#ffffff, 0.07);
+    background-color: alpha(#222226, 0.4);
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+.winclip-brand-icon {
+    border-radius: 8px;
+    padding: 2px;
 }
 
 .winclip-title {
@@ -21,74 +30,122 @@ window.winclip-window {
     color: #ffffff;
 }
 
+.winclip-count-badge {
+    font-size: 11px;
+    font-weight: 600;
+    color: #a1a1aa;
+    background-color: alpha(#ffffff, 0.08);
+    border-radius: 12px;
+    padding: 2px 8px;
+    margin-left: 6px;
+}
+
 .winclip-clear-btn {
     border-radius: 8px;
-    padding: 4px 10px;
+    padding: 5px 12px;
     font-size: 12px;
-    font-weight: 500;
-    color: #ff6b6b;
-    background-color: alpha(#ff6b6b, 0.12);
-    border: 1px solid alpha(#ff6b6b, 0.25);
+    font-weight: 600;
+    color: #f87171;
+    background-color: alpha(#ef4444, 0.12);
+    border: 1px solid alpha(#ef4444, 0.25);
     transition: all 120ms ease;
 }
 
 .winclip-clear-btn:hover {
-    background-color: alpha(#ff6b6b, 0.24);
-    border-color: #ff6b6b;
+    background-color: alpha(#ef4444, 0.25);
+    border-color: #ef4444;
     color: #ffffff;
 }
 
-/* Search Entry */
-.winclip-search {
-    margin: 10px 16px 8px 16px;
+.winclip-close-btn {
+    border-radius: 8px;
+    padding: 5px 8px;
+    background-color: transparent;
+    border: none;
+    color: #a1a1aa;
+    transition: all 120ms ease;
 }
 
-.winclip-search entry {
+.winclip-close-btn:hover {
+    background-color: alpha(#ffffff, 0.12);
+    color: #ffffff;
+}
+
+/* Search Bar */
+.winclip-search-container {
+    padding: 12px 18px 8px 18px;
+}
+
+.winclip-search-entry {
     border-radius: 10px;
-    background-color: alpha(#000000, 0.25);
-    border: 1px solid alpha(#ffffff, 0.12);
+    background-color: alpha(#09090b, 0.45);
+    border: 1px solid alpha(#ffffff, 0.10);
     padding: 8px 12px;
     color: #ffffff;
     font-size: 13px;
-    transition: border-color 150ms ease;
+    transition: all 150ms ease;
 }
 
-.winclip-search entry:focus {
+.winclip-search-entry:focus {
     border-color: #0078d4;
-    background-color: alpha(#000000, 0.35);
+    background-color: alpha(#09090b, 0.65);
+    box-shadow: 0 0 0 2px alpha(#0078d4, 0.35);
 }
 
-/* Category Filter Tabs */
-.winclip-tabs {
-    margin: 4px 16px 10px 16px;
+/* Category Filter Tabs (Segmented Control) */
+.winclip-tabs-container {
+    padding: 4px 18px 10px 18px;
+}
+
+.winclip-tabs-bar {
+    background-color: alpha(#09090b, 0.3);
+    border: 1px solid alpha(#ffffff, 0.06);
+    border-radius: 12px;
+    padding: 3px;
 }
 
 .winclip-tab-btn {
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 5px 12px;
     font-size: 12px;
     font-weight: 600;
-    color: #cccccc;
-    background-color: alpha(#ffffff, 0.06);
-    border: 1px solid alpha(#ffffff, 0.08);
+    color: #a1a1aa;
+    background-color: transparent;
+    border: 1px solid transparent;
     transition: all 120ms ease;
-    margin-right: 6px;
+    margin-right: 2px;
 }
 
 .winclip-tab-btn:hover {
-    background-color: alpha(#ffffff, 0.12);
-    color: #ffffff;
+    background-color: alpha(#ffffff, 0.08);
+    color: #f4f4f5;
 }
 
 .winclip-tab-btn.active {
     background-color: #0078d4;
     border-color: #0078d4;
     color: #ffffff;
+    box-shadow: 0 2px 6px alpha(#0078d4, 0.4);
 }
 
-/* Clipboard Items Container */
+.winclip-tab-counter {
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 1px 5px;
+    margin-left: 5px;
+    background-color: alpha(#ffffff, 0.12);
+    color: #d4d4d8;
+}
+
+.winclip-tab-btn.active .winclip-tab-counter {
+    background-color: alpha(#ffffff, 0.25);
+    color: #ffffff;
+}
+
+/* Scrolled List Container */
 .winclip-list-scroll {
-    padding: 0 12px 12px 12px;
+    padding: 0 14px 10px 14px;
 }
 
 .winclip-list {
@@ -96,114 +153,269 @@ window.winclip-window {
     padding: 0;
 }
 
-/* Clipboard Card */
+/* Clipboard Item Card */
 .clip-card {
-    background-color: alpha(#2c2c2c, 0.85);
+    background-color: alpha(#27272b, 0.88);
     border-radius: 12px;
-    border: 1px solid alpha(#ffffff, 0.09);
-    padding: 12px 14px;
+    border: 1px solid alpha(#ffffff, 0.08);
+    padding: 10px 14px;
     margin-bottom: 8px;
     transition: all 120ms ease;
 }
 
 .clip-card:hover {
-    background-color: alpha(#383838, 0.95);
-    border-color: alpha(#0078d4, 0.7);
-}
-
-.clip-card.pinned {
-    border-left: 4px solid #ffb900;
-    background-color: alpha(#333328, 0.85);
+    background-color: alpha(#323238, 0.96);
+    border-color: alpha(#60cdff, 0.5);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 
 .clip-card.selected {
     border-color: #0078d4;
-    background-color: alpha(#0078d4, 0.2);
+    background-color: alpha(#0078d4, 0.16);
+    box-shadow: 0 0 0 1px #0078d4, 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Text Content Preview */
-.clip-text-content {
-    font-size: 13px;
-    color: #f1f1f1;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", sans-serif;
-    margin-bottom: 8px;
+.clip-card.pinned {
+    border-left: 4px solid #f59e0b;
+    background-color: alpha(#332f25, 0.88);
 }
 
-/* Image Preview Container */
-.clip-image-box {
-    border-radius: 8px;
-    background-color: alpha(#000000, 0.3);
-    margin-bottom: 8px;
-    padding: 4px;
+.clip-card.pinned:hover {
+    background-color: alpha(#3d372b, 0.96);
 }
 
-/* Card Footer / Metadata Row */
-.clip-footer {
-    padding-top: 4px;
+/* Card Header Row */
+.clip-card-header {
+    margin-bottom: 6px;
 }
 
-.clip-meta-badge {
+/* Type Badges */
+.badge-flavor {
     font-size: 11px;
-    color: #9d9d9d;
-    font-weight: 500;
+    font-weight: 700;
+    border-radius: 6px;
+    padding: 2px 7px;
+    letter-spacing: 0.2px;
+}
+
+.badge-link {
+    color: #38bdf8;
+    background-color: alpha(#38bdf8, 0.15);
+    border: 1px solid alpha(#38bdf8, 0.3);
+}
+
+.badge-code {
+    color: #c084fc;
+    background-color: alpha(#c084fc, 0.15);
+    border: 1px solid alpha(#c084fc, 0.3);
+}
+
+.badge-color {
+    color: #fb923c;
+    background-color: alpha(#fb923c, 0.15);
+    border: 1px solid alpha(#fb923c, 0.3);
+}
+
+.badge-image {
+    color: #34d399;
+    background-color: alpha(#34d399, 0.15);
+    border: 1px solid alpha(#34d399, 0.3);
+}
+
+.badge-text {
+    color: #94a3b8;
+    background-color: alpha(#94a3b8, 0.12);
+    border: 1px solid alpha(#94a3b8, 0.2);
+}
+
+.badge-pinned {
+    color: #fbbf24;
+    background-color: alpha(#f59e0b, 0.18);
+    border: 1px solid alpha(#f59e0b, 0.35);
+    margin-left: 4px;
 }
 
 .clip-time-badge {
     font-size: 11px;
-    color: #808080;
+    color: #71717a;
+    font-weight: 500;
     margin-left: 8px;
 }
 
-/* Action Buttons (Pin, Delete, Copy) */
+/* Content Area */
+.clip-text-content {
+    font-size: 13px;
+    color: #f4f4f5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", sans-serif;
+    margin-bottom: 6px;
+}
+
+.clip-url-content {
+    font-size: 13px;
+    color: #38bdf8;
+    text-decoration: underline;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", sans-serif;
+    margin-bottom: 6px;
+}
+
+.clip-code-box {
+    background-color: alpha(#111113, 0.85);
+    border: 1px solid alpha(#ffffff, 0.08);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+}
+
+.clip-code-content {
+    font-size: 12px;
+    font-family: "Cascadia Code", "JetBrains Mono", "Fira Code", "Ubuntu Mono", "Consolas", monospace;
+    color: #e4e4e7;
+}
+
+.clip-color-box {
+    background-color: alpha(#111113, 0.65);
+    border: 1px solid alpha(#ffffff, 0.08);
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+}
+
+.clip-color-hex {
+    font-size: 13px;
+    font-family: "Cascadia Code", "JetBrains Mono", monospace;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+.clip-image-box {
+    border-radius: 8px;
+    background-color: alpha(#000000, 0.35);
+    border: 1px solid alpha(#ffffff, 0.08);
+    margin-bottom: 6px;
+    padding: 4px;
+}
+
+/* Card Footer */
+.clip-footer {
+    padding-top: 4px;
+    border-top: 1px solid alpha(#ffffff, 0.05);
+}
+
+.clip-meta-badge {
+    font-size: 11px;
+    color: #82828c;
+    font-weight: 500;
+}
+
+/* Action Buttons (Copy, Pin, Open Link, Delete) */
 .clip-action-btn {
     border-radius: 6px;
     padding: 4px 6px;
     background-color: transparent;
     border: none;
-    color: #a0a0a0;
+    color: #a1a1aa;
     transition: all 100ms ease;
+    margin-left: 3px;
 }
 
 .clip-action-btn:hover {
-    background-color: alpha(#ffffff, 0.15);
+    background-color: alpha(#ffffff, 0.12);
     color: #ffffff;
 }
 
+.clip-copy-btn:hover {
+    background-color: alpha(#0078d4, 0.25);
+    color: #60cdff;
+}
+
+.clip-link-btn:hover {
+    background-color: alpha(#38bdf8, 0.25);
+    color: #38bdf8;
+}
+
 .clip-pin-btn.pinned {
-    color: #ffb900;
+    color: #fbbf24;
+}
+
+.clip-pin-btn:hover {
+    background-color: alpha(#f59e0b, 0.22);
+    color: #fbbf24;
 }
 
 .clip-del-btn:hover {
-    background-color: alpha(#ff4d4d, 0.2);
-    color: #ff6b6b;
+    background-color: alpha(#ef4444, 0.25);
+    color: #f87171;
+}
+
+/* Toast Notification Overlay */
+.winclip-toast {
+    background-color: alpha(#222226, 0.98);
+    color: #ffffff;
+    border: 1px solid alpha(#0078d4, 0.6);
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
 /* Empty State */
 .winclip-empty-state {
-    padding: 48px 24px;
-    color: #888888;
+    padding: 60px 24px;
+    color: #71717a;
 }
 
 .winclip-empty-title {
     font-size: 15px;
-    font-weight: 600;
-    color: #cccccc;
-    margin-top: 12px;
+    font-weight: 700;
+    color: #e4e4e7;
+    margin-top: 14px;
 }
 
 .winclip-empty-subtitle {
     font-size: 12px;
-    color: #888888;
-    margin-top: 4px;
+    color: #a1a1aa;
+    margin-top: 6px;
 }
 
-/* Hint footer */
+/* Modern Footer with Shortcuts */
 .winclip-hint-footer {
-    padding: 8px 16px;
-    border-top: 1px solid alpha(#ffffff, 0.06);
+    padding: 10px 18px;
+    border-top: 1px solid alpha(#ffffff, 0.07);
     font-size: 11px;
-    color: #777777;
-    background-color: alpha(#151515, 0.7);
-    border-bottom-left-radius: 16px;
-    border-bottom-right-radius: 16px;
+    color: #a1a1aa;
+    background-color: alpha(#161619, 0.9);
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+
+.winclip-kbd {
+    background-color: alpha(#ffffff, 0.12);
+    border: 1px solid alpha(#ffffff, 0.18);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 2px;
+}
+
+/* Scrollbar Minimalist Fluent Style */
+scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: alpha(#ffffff, 0.15);
+    border-radius: 10px;
+    min-width: 6px;
+    min-height: 24px;
+    border: 2px solid transparent;
+}
+
+scrollbar slider:hover {
+    background-color: alpha(#ffffff, 0.35);
 }

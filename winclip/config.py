@@ -26,8 +26,8 @@ THUMBNAIL_MAX_SIZE = (360, 180)
 JPEG_QUALITY = 85
 
 # UI Settings
-WINDOW_WIDTH = 420
-WINDOW_HEIGHT = 620
+WINDOW_WIDTH = 460
+WINDOW_HEIGHT = 660
 AUTO_HIDE_ON_BLUR = True  # Auto close when clicking outside, like Windows Win+V
 
 # Ensure runtime directories exist

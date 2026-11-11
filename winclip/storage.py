@@ -160,6 +160,8 @@ class ClipboardStorage:
             clauses.append("item_type = 'image'")
         elif filter_type == "pinned":
             clauses.append("is_pinned = 1")
+        elif filter_type == "link":
+            clauses.append("item_type = 'text' AND (content LIKE 'http://%' OR content LIKE 'https://%')")
 
         if query.strip():
             # Search both in preview text and content for text, or preview for image
@@ -185,6 +187,24 @@ class ClipboardStorage:
             cur = conn.execute("SELECT * FROM clipboard_items WHERE id = ?", (item_id,))
             row = cur.fetchone()
             return dict(row) if row else None
+
+    def get_counts(self) -> Dict[str, int]:
+        """Get live counts for all categories."""
+        with self._connection() as conn:
+            all_c = conn.execute("SELECT COUNT(*) AS c FROM clipboard_items").fetchone()["c"]
+            text_c = conn.execute("SELECT COUNT(*) AS c FROM clipboard_items WHERE item_type = 'text'").fetchone()["c"]
+            image_c = conn.execute("SELECT COUNT(*) AS c FROM clipboard_items WHERE item_type = 'image'").fetchone()["c"]
+            pinned_c = conn.execute("SELECT COUNT(*) AS c FROM clipboard_items WHERE is_pinned = 1").fetchone()["c"]
+            link_c = conn.execute(
+                "SELECT COUNT(*) AS c FROM clipboard_items WHERE item_type = 'text' AND (content LIKE 'http://%' OR content LIKE 'https://%')"
+            ).fetchone()["c"]
+            return {
+                "all": all_c,
+                "text": text_c,
+                "image": image_c,
+                "link": link_c,
+                "pinned": pinned_c,
+            }
 
     def toggle_pin(self, item_id: int) -> bool:
         with self._connection() as conn:

@@ -11,10 +11,16 @@ It preserves both copied **text** (multi-line, code snippets, links) and **image
 - ⌨️ **Native `Super + V` Shortcut**: Opens and toggles the clipboard history just like Windows 11.
 - 📋 **Full Text Support**: Stores plain text, multi-line snippets, code, URLs, and JSON with line & character counts.
 - 🖼️ **Full Image Support**: Captures screenshots (PrintScreen), copied images from browsers, GIMP, etc., with thumbnail previews and dimension metadata.
-- 🎨 **Windows 11 Fluent Design**: Translucent dark acrylic theme with rounded corners, smooth animations, and Libadwaita / GTK 4 integration.
+- 🎨 **Windows 11 Fluent Acrylic Design**: Translucent dark acrylic theme with rounded corners, smooth elevation, glassmorphism, and Libadwaita / GTK styling.
+- 💡 **Smart Content Badging**:
+  - 🎨 **Live Color Previews**: Hex/RGB codes (`#0078d4`, `rgb(...)`) display real-time rendered color swatch previews.
+  - 🔗 **Smart Links**: URLs display domain badges and a one-click "Open in Browser" action button.
+  - `< / >` **Code & Commands**: Multi-line snippets and terminal commands render with monospace fonts and code badges.
 - 📌 **Pinning**: Pin favorite or frequently used items so they stay permanently and survive clearing.
 - 🔍 **Instant Search**: Real-time filtering by keyword or content as you type.
-- 🗂️ **Category Tabs**: Filter between **All**, **Text**, **Images**, and **Pinned**.
+- 🗂️ **Category Tabs with Live Counters**: Filter between **All**, **Text**, **Links**, **Images**, and **Pinned** with real-time count badges.
+- 🎯 **Full Keyboard Navigation**: Navigate with `↑`/`↓` arrows, press `Enter` to copy, `P` to pin, and `Delete` to delete.
+- 🍞 **Action Toasts**: Instant visual feedback on copy, pin, delete, and clear.
 - 🧹 **Clear All**: One-click wipe of unpinned items to keep your clipboard clean.
 - ⚡ **Ultra-Fast & Zero CPU Overhead**: Event-based daemon with negligible CPU (<0.01%) and instant response (<15ms) via local IPC.
 - 🚀 **Autostart**: Automatically starts on user login.
@@ -43,11 +49,14 @@ The script will automatically:
 | Key / Action | Description |
 | :--- | :--- |
 | **`Super + V`** | Toggle the Windows Clipboard flyout open/closed |
+| **`↑ / ↓ Arrows`** | Navigate through clipboard items with glowing focus ring |
+| **`Enter`** | Copy selected item to clipboard and close flyout |
 | **`Click Card`** | Copy item to system clipboard and close flyout |
+| **`P` or `📌 Pin`** | Pin/unpin item to keep it permanently at the top |
+| **`Del` or `🗑️ Delete`** | Remove individual item from history |
+| **`O` or `🔗 Open`** | Open link in default web browser |
 | **`Esc`** | Close clipboard flyout |
 | **`Click Outside`** | Auto-dismiss flyout (Windows behavior) |
-| **`📌 Pin`** | Pin item so it is never deleted by "Clear all" |
-| **`🗑️ Delete`** | Remove individual item from history |
 
 ---
 

@@ -1,0 +1,209 @@
+/* Windows 11 Fluent Clipboard Theme for Ubuntu GTK4 / Libadwaita */
+
+window.winclip-window {
+    background-color: alpha(#1e1e1e, 0.96);
+    color: #f3f3f3;
+    border-radius: 16px;
+    border: 1px solid alpha(#ffffff, 0.12);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* Header */
+.winclip-header {
+    padding: 14px 16px 10px 16px;
+    border-bottom: 1px solid alpha(#ffffff, 0.08);
+}
+
+.winclip-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+}
+
+.winclip-clear-btn {
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #ff6b6b;
+    background-color: alpha(#ff6b6b, 0.12);
+    border: 1px solid alpha(#ff6b6b, 0.25);
+    transition: all 120ms ease;
+}
+
+.winclip-clear-btn:hover {
+    background-color: alpha(#ff6b6b, 0.24);
+    border-color: #ff6b6b;
+    color: #ffffff;
+}
+
+/* Search Entry */
+.winclip-search {
+    margin: 10px 16px 8px 16px;
+}
+
+.winclip-search entry {
+    border-radius: 10px;
+    background-color: alpha(#000000, 0.25);
+    border: 1px solid alpha(#ffffff, 0.12);
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 13px;
+    transition: border-color 150ms ease;
+}
+
+.winclip-search entry:focus {
+    border-color: #0078d4;
+    background-color: alpha(#000000, 0.35);
+}
+
+/* Category Filter Tabs */
+.winclip-tabs {
+    margin: 4px 16px 10px 16px;
+}
+
+.winclip-tab-btn {
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #cccccc;
+    background-color: alpha(#ffffff, 0.06);
+    border: 1px solid alpha(#ffffff, 0.08);
+    transition: all 120ms ease;
+    margin-right: 6px;
+}
+
+.winclip-tab-btn:hover {
+    background-color: alpha(#ffffff, 0.12);
+    color: #ffffff;
+}
+
+.winclip-tab-btn.active {
+    background-color: #0078d4;
+    border-color: #0078d4;
+    color: #ffffff;
+}
+
+/* Clipboard Items Container */
+.winclip-list-scroll {
+    padding: 0 12px 12px 12px;
+}
+
+.winclip-list {
+    margin: 0;
+    padding: 0;
+}
+
+/* Clipboard Card */
+.clip-card {
+    background-color: alpha(#2c2c2c, 0.85);
+    border-radius: 12px;
+    border: 1px solid alpha(#ffffff, 0.09);
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    transition: all 120ms ease;
+}
+
+.clip-card:hover {
+    background-color: alpha(#383838, 0.95);
+    border-color: alpha(#0078d4, 0.7);
+}
+
+.clip-card.pinned {
+    border-left: 4px solid #ffb900;
+    background-color: alpha(#333328, 0.85);
+}
+
+.clip-card.selected {
+    border-color: #0078d4;
+    background-color: alpha(#0078d4, 0.2);
+}
+
+/* Text Content Preview */
+.clip-text-content {
+    font-size: 13px;
+    color: #f1f1f1;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Ubuntu", sans-serif;
+    margin-bottom: 8px;
+}
+
+/* Image Preview Container */
+.clip-image-box {
+    border-radius: 8px;
+    background-color: alpha(#000000, 0.3);
+    margin-bottom: 8px;
+    padding: 4px;
+}
+
+/* Card Footer / Metadata Row */
+.clip-footer {
+    padding-top: 4px;
+}
+
+.clip-meta-badge {
+    font-size: 11px;
+    color: #9d9d9d;
+    font-weight: 500;
+}
+
+.clip-time-badge {
+    font-size: 11px;
+    color: #808080;
+    margin-left: 8px;
+}
+
+/* Action Buttons (Pin, Delete, Copy) */
+.clip-action-btn {
+    border-radius: 6px;
+    padding: 4px 6px;
+    background-color: transparent;
+    border: none;
+    color: #a0a0a0;
+    transition: all 100ms ease;
+}
+
+.clip-action-btn:hover {
+    background-color: alpha(#ffffff, 0.15);
+    color: #ffffff;
+}
+
+.clip-pin-btn.pinned {
+    color: #ffb900;
+}
+
+.clip-del-btn:hover {
+    background-color: alpha(#ff4d4d, 0.2);
+    color: #ff6b6b;
+}
+
+/* Empty State */
+.winclip-empty-state {
+    padding: 48px 24px;
+    color: #888888;
+}
+
+.winclip-empty-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #cccccc;
+    margin-top: 12px;
+}
+
+.winclip-empty-subtitle {
+    font-size: 12px;
+    color: #888888;
+    margin-top: 4px;
+}
+
+/* Hint footer */
+.winclip-hint-footer {
+    padding: 8px 16px;
+    border-top: 1px solid alpha(#ffffff, 0.06);
+    font-size: 11px;
+    color: #777777;
+    background-color: alpha(#151515, 0.7);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}

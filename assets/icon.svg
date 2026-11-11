@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0078d4" />
+      <stop offset="100%" stop-color="#004e8c" />
+    </linearGradient>
+    <linearGradient id="boardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdfdfd" />
+      <stop offset="100%" stop-color="#e6e9ed" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded card -->
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="url(#bgGrad)" filter="url(#shadow)" />
+
+  <!-- Clipboard Board -->
+  <rect x="28" y="32" width="72" height="74" rx="10" fill="url(#boardGrad)" />
+
+  <!-- Clip on top -->
+  <rect x="46" y="24" width="36" height="16" rx="6" fill="#1b528a" />
+  <rect x="52" y="28" width="24" height="8" rx="3" fill="#ffffff" />
+
+  <!-- Paper lines (text simulation) -->
+  <rect x="38" y="52" width="52" height="6" rx="3" fill="#0078d4" />
+  <rect x="38" y="66" width="36" height="6" rx="3" fill="#8da3b8" />
+  
+  <!-- Mini image icon inside clipboard -->
+  <rect x="38" y="80" width="22" height="16" rx="3" fill="#0078d4" fill-opacity="0.2" />
+  <circle cx="44" cy="85" r="2" fill="#0078d4" />
+  <polygon points="40,94 48,87 56,94" fill="#0078d4" />
+
+  <!-- Check badge on bottom right -->
+  <circle cx="94" cy="94" r="16" fill="#107c41" filter="url(#shadow)" />
+  <path d="M87 94 L92 99 L101 89" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

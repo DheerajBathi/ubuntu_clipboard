@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Windows Clipboard wrapper script for Ubuntu
+REAL_SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+SCRIPT_DIR="$(cd "$(dirname "${REAL_SCRIPT}")/.." && pwd)"
+exec /usr/bin/python3 "${SCRIPT_DIR}/main.py" "$@"

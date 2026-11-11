@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Windows Clipboard
+Comment=Windows 11-style Clipboard Manager for Ubuntu
+Exec=/home/dheeraj/.local/bin/winclip --toggle
+Icon=/home/dheeraj/Desktop/Personal Projects/clipboard/assets/icon.svg
+Terminal=false
+Type=Application
+Categories=Utility;GTK;
+Keywords=clipboard;history;paste;copy;winclip;
+StartupNotify=false

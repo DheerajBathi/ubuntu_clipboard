@@ -1,0 +1,10 @@
+# System requirements for Ubuntu (already available in default Ubuntu):
+# - python3 (>= 3.10)
+# - python3-gi (PyGObject)
+# - gir1.2-gtk-4.0
+# - gir1.2-adw-1
+# - wl-clipboard
+# - xclip
+
+# Python packages
+Pillow>=9.0.0

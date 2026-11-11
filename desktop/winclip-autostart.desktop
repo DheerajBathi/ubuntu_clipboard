@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Windows Clipboard Daemon
+Comment=Background clipboard listener for Ubuntu
+Exec=/home/dheeraj/.local/bin/winclip --daemon
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
+StartupNotify=false
